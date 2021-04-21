@@ -1,6 +1,7 @@
 
 ## LOAD PACKAGES ----
 library(tidyverse)
+library(elo)
 
 ## REQUIREMENTS ----
 # Run /scrape_trols_data.R to create matchScores dataset.
@@ -23,4 +24,3 @@ matchStats <- bind_rows((matchScores[,c(1,2,3,5,9,10)] %>% set_names(.,c("Date",
             percentageSets = 100*(sum(setsWon) / sum(setsLost)))
 
 ## CALCULATE ELO RATINGS ----
-
